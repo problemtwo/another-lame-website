@@ -74,21 +74,21 @@ window.onload = function() {
    el.classList.add('active');
    let idx = Math.floor([...document.getElementsByClassName('title')].indexOf(el)/3);
    if(el.classList.contains('t-code')){
-    [...document.getElementsByClassName('code-html')][idx].style.zIndex = 3;
-    [...document.getElementsByClassName('code-js')][idx].style.zIndex = 3;
-    [...document.getElementsByClassName('output')][idx].style.zIndex = 2;
-    [...document.getElementsByClassName('files')][idx].style.zIndex = 1;
+    [...document.getElementsByClassName('code-html')][0].style.zIndex = 3;
+    [...document.getElementsByClassName('code-js')][0].style.zIndex = 3;
+    [...document.getElementsByClassName('output')][0].style.zIndex = 2;
+    [...document.getElementsByClassName('files')][0].style.zIndex = 1;
    }else if(el.classList.contains('t-output')){
-    [...document.getElementsByClassName('files')][idx].style.zIndex = 1;
-    [...document.getElementsByClassName('code-html')][idx].style.zIndex = 2;
-    [...document.getElementsByClassName('code-js')][idx].style.zIndex = 2;
-    [...document.getElementsByClassName('output')][idx].style.zIndex = 3;
+    [...document.getElementsByClassName('files')][0].style.zIndex = 1;
+    [...document.getElementsByClassName('code-html')][0].style.zIndex = 2;
+    [...document.getElementsByClassName('code-js')][0].style.zIndex = 2;
+    [...document.getElementsByClassName('output')][0].style.zIndex = 3;
     try{
-     [...document.getElementsByClassName('output')][idx].contentWindow.document.body.innerHTML = '';
-     [...document.getElementsByClassName('output')][idx].contentWindow.document.write(
-      [...document.getElementsByClassName('code-html')][idx].value);
-     (0,eval)([...document.getElementsByClassName('code-js')][idx].value);
-    }catch(ex){[...document.getElementsByClassName('output')][idx]
+     [...document.getElementsByClassName('output')][0].contentWindow.document.body.innerHTML = '';
+     [...document.getElementsByClassName('output')][0].contentWindow.document.write(
+      [...document.getElementsByClassName('code-html')][0].value);
+     (0,eval)([...document.getElementsByClassName('code-js')][0].value);
+    }catch(ex){[...document.getElementsByClassName('output')][0]
                .contentWindow.document.body.innerHTML =
                '<p style="color:#fff">' + ex.message + '</p>';}
    }else if(el.classList.contains('t-files')){
