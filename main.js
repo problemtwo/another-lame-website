@@ -88,8 +88,8 @@ window.onload = function() {
      [...document.getElementsByClassName('output')][0].contentWindow.document.write(
       [...document.getElementsByClassName('code-html')][0].value);
      (0,eval)([...document.getElementsByClassName('code-js')][0].value);
-    }catch(ex){[...document.getElementsByClassName('output')][0]
-               .contentWindow.document.body.innerHTML =
+    }catch(ex){([...document.getElementsByClassName('output')][0]
+               .contentWindow.document) || ([...document.getElementsByClassName('output')][0].contentDocument).body.innerHTML =
                '<p style="color:#fff">' + ex.message + '</p>';}
    }else if(el.classList.contains('t-files')){
     [...document.getElementsByClassName('files')][idx].style.zIndex = 3;
