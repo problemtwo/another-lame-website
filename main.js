@@ -121,7 +121,9 @@ window.onload = function() {
     currentFile = k;
     break;
    }
-   [...document.getElementsByClassName('code')][0].value = files[currentFile];
+   [...document.getElementsByClassName('code-html')][0].value = files[currentFile]['html'];
+   [...document.getElementsByClassName('code-css')][0].value = files[currentFile]['css'];
+   [...document.getElementsByClassName('code-js')][0].value = files[currentFile]['js'];
   };
   reader.readAsText(e.target.files[0]);
  }
