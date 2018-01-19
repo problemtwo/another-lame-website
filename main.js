@@ -4,7 +4,7 @@ const print = (function(x){
 });
 
 window.onload = function() {
- let files = {'test':''};
+ let files = {'test':{'html':'','css':'','js':''}};
  let currentFile = 'test';
  
  function dictSort(d){
@@ -24,9 +24,15 @@ window.onload = function() {
      files[document.getElementById('flname').value] = '';
      updateFiles();
     }
-    files[currentFile] = [...document.getElementsByClassName('code')][0].value;
-    [...document.getElementsByClassName('code')][0].value =
-            files[document.getElementById('flname').value];
+    files[currentFile]['html'] = [...document.getElementsByClassName('code-html')][0].value;
+    files[currentFile]['css'] = [...document.getElementsByClassName('code-css')][0].value;
+    files[currentFile]['js'] = [...document.getElementsByClassName('code-js')][0].value;
+    [...document.getElementsByClassName('code-html')][0].value =
+            files[document.getElementById('flname').value]['html'];
+    [...document.getElementsByClassName('code-css')][0].value =
+            files[document.getElementById('flname').value]['css'];
+    [...document.getElementsByClassName('code-js')][0].value =
+            files[document.getElementById('flname').value]['js'];
     currentFile = document.getElementById('flname').value
    }
   }
