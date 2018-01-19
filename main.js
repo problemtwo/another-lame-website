@@ -21,7 +21,6 @@ window.onload = function() {
    e.preventDefault();
    if(document.getElementById('flname') !== undefined){
     if(files[document.getElementById('flname').value] === undefined){
-     console.log('it works!');
      files[document.getElementById('flname').value] = '';
      updateFiles();
     }
