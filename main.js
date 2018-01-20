@@ -7,6 +7,37 @@ window.onload = function() {
  let files = {'test':{'html':'','css':'','js':''}};
  let currentFile = 'test';
  
+	const positions = {
+		'l-a':[[0,10],[0,40],[0,70]],
+		'l-b':[[0,10],[50,10],[0,55]],
+		'l-c':[[0,10],[0,55],[50,55]],
+		'l-d':[[0,10],[50,10],[50,55]],
+		'l-e':[[0,10],[33.33,10],[66.66,10]]
+	};
+
+	const sizes = {
+		'l-a':[[100,30],[100,30],[100,30]],
+		'l-b':[[50,45],[50,45],[100,45]],
+		'l-c':[[100,45],[50,45],[50,45]],
+		'l-d':[[50,90],[50,45],[50,45]],
+		'l-e':[[33.33,90],[33.33,90],[33.33,90]]
+	};
+
+	['a','b','c','d','e'].forEach(v => {
+		document.getElementById('l-' + v).onclick = () => {
+			[...document.getElementsByClassName('chosen')][0].classList.remove('chosen');
+			document.getElementById('l-' + v).classList.add('chosen');
+			[0,1,2].forEach(w => {
+				const el = [...document.getElementsByClassName('code')][w]
+				console.log(el);
+				el.style.left = positions['l-' + v][w][0] + 'vw';
+				el.style.top = positions['l-' + v][w][1] + 'vh';
+				el.style.width = sizes['l-' + v][w][0] + '%';
+				el.style.height = sizes['l-' + v][w][1] + '%';
+			});
+		}
+	});
+
  function dictSort(d){
   let keys = [];
   for(let k in d){keys.push(k);}

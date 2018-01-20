@@ -3,6 +3,8 @@
  <head>
   <meta charset='utf-8' />
   <link rel='stylesheet' href='style.css' type='text/css' />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src='jquery-linedtextarea.js'></script>
   <script type='text/javascript' src='main.js'></script>
  </head>
  <body>
@@ -11,10 +13,35 @@
     <h1 class='title t-code active'>Code</h1>
     <h1 class='title t-output'>Output</h1>
     <h1 class='title t-files'>Files</h1>
+				<div id='l-a' class='chosen'>
+					<div class='a-c'>html</div>
+					<div class='a-c'>css</div>
+					<div class='a-c'>js</div>
+				</div>
+				<div id='l-b'>
+					<div class='b-b'>html</div>
+					<div class='b-b'>css</div>
+					<div class='a-b'>js</div>
+				</div>
+				<div id='l-c'>
+					<div class='a-b'>html</div>
+					<div class='b-b'>css</div>
+					<div class='b-b'>js</div>
+				</div>
+				<div id='l-d'>
+					<div class='b-a'>html</div>
+					<div class='b-b'>css</div>
+					<div class='b-b'>js</div>
+				</div>
+				<div id='l-e'>
+					<div class='c-a'>html</div>
+					<div class='c-a'>css</div>
+					<div class='c-a'>js</div>
+				</div>
    </div>
-   <textarea class='code-html' spellcheck='false' placeholder='html...'></textarea>
-   <textarea class='code-css' spellcheck='false' placeholder='css...'></textarea>
-   <textarea class='code-js' spellcheck='false' placeholder='js...'></textarea>
+   <textarea class='code code-html' spellcheck='false' placeholder='html...'></textarea>
+   <textarea class='code code-css' spellcheck='false' placeholder='css...'></textarea>
+   <textarea class='code code-js' spellcheck='false' placeholder='js...'></textarea>
    <iframe class='output'></iframe>
    <div class='files'></div>
    <div id='filename'></div>

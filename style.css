@@ -6,9 +6,20 @@ html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;}
 .top>h1{float:left;width:10%;text-align:center;-moz-user-select:none;
         color:#2b2b2d;font-family:'Ubuntu Condensed';user-select:none;}
 .top>h1.active{color:#fff;}
+.top>div{float:left;width:6%;height:90%;border:solid .5vmin #4d4d4f;border-right:none;}
+.top>div.chosen{border:solid .5vmin #fff;}
+#l-e{border-right:solid .5vmin #4d4d4f;}
+#l-e.chosen{border-right:solid .5vmin #fff;}
+.top>div>div{display:flex;justify-content:center;align-items:center;
+	            float:left;font-family:'Ubuntu Condensed';color:#fff;}
+.b-b{width:50%;height:50%;}
+.a-b{width:100%;height:50%;}
+.b-a{width:50%;height:100%;}
+.c-a{width:33.33%;height:100%;}
+.a-c{width:100%;height:33.33%;}
 .code-html,.code-css,.code-js,.output,.files{position:fixed;top:10vh;left:0;width:100%;height:90%;border:none;
       outline:none;background:#2b2b2d;color:#fff;font-size:130%;color:#fff;}
-.code-html,.code-css,.code-js{z-index:3;font-family:'Anonymous Pro';height:30%;}
+.code-html,.code-css,.code-js{z-index:3;font-family:'Anonymous Pro';width:100%;height:30%;resize:none;}
 .code-css{top:40vh;}
 .code-js{top:70vh;}
 .output{z-index:2;}
