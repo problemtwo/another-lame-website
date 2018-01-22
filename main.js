@@ -58,6 +58,9 @@ window.onload = function() {
     files[currentFile]['html'] = [...document.getElementsByClassName('code-html')][0].value;
     files[currentFile]['css'] = [...document.getElementsByClassName('code-css')][0].value;
     files[currentFile]['js'] = [...document.getElementsByClassName('code-js')][0].value;
+	  if(files[docuent.getElementById('flname').value] === undefined){
+			files[docuent.getElementById('flname').value] = {'html':'','css':'','js':''};
+		}
     [...document.getElementsByClassName('code-html')][0].value =
             files[document.getElementById('flname').value]['html'];
     [...document.getElementsByClassName('code-css')][0].value =
