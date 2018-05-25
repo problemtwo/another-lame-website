@@ -52,7 +52,7 @@ window.onload = function() {
    e.preventDefault();
    if(document.getElementById('flname') !== undefined){
     if(files[document.getElementById('flname').value] === undefined){
-     files[document.getElementById('flname').value] = '';
+     files[document.getElementById('flname').value] = {'html':'','css':'','js':''};
      updateFiles();
     }
     files[currentFile]['html'] = [...document.getElementsByClassName('code-html')][0].value;
