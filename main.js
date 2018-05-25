@@ -166,7 +166,7 @@ window.onload = function() {
  window.onkeydown = function(e){
   if(e.keyCode === 17){
    ctrl = true;
-  }else if(e.keyCode === 219 && ctrl === true){
+  }else if(e.keyCode === 220 && ctrl === true){
    save({'keyCode':13,'preventDefault':function(){}});
    const a = document.createElement('a');
    a.setAttribute('download','profile.lame');
